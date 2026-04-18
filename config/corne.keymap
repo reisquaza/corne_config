@@ -63,11 +63,6 @@
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <27 28>;
         };
-
-        navigation_layer {
-            bindings = <&to 3>;
-            key-positions = <18 19 20 21>;
-        };
     };
 
     keymap {
@@ -82,26 +77,26 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC  &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y           &kp U  &kp I             &kp O    &kp P     &trans
-&trans   &kp A  &kp S  &kp D             &kp F  &kp G        &kp H           &kp J  &kp K             &kp L    &kp SEMI  &kp SQT
-&trans   &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N           &kp M  &kp COMMA         &kp DOT  &kp FSLH  &trans
-                       &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp LEFT_SHIFT  &mo 2  &kp LS(LEFT_ALT)
+&trans  &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y           &kp U  &kp I             &kp O    &kp P     &trans
+&to 3   &kp A  &kp S  &kp D             &kp F  &kp G        &kp H           &kp J  &kp K             &kp L    &kp SEMI  &to 2
+&trans  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N           &kp M  &kp COMMA         &kp DOT  &kp FSLH  &trans
+                      &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp LEFT_SHIFT  &mo 4  &kp LS(LEFT_ALT)
             >;
         };
 
         number_layer {
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp FSLH   &trans
-&trans  &kp F4  &kp F3   &kp F2   &kp F1   &trans    &kp PLUS      &kp N1  &kp N2  &kp N3  &kp MINUS  &trans
-&trans  &kp F8  &kp F7   &kp F6   &kp F5   &trans    &kp PERCENT   &kp N4  &kp N5  &kp N6  &kp N0     &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp FSLH     &trans
+&trans  &kp F4  &kp F3   &kp F2   &kp F1   &trans    &kp PLUS      &kp N4  &kp N5  &kp N6  &kp MINUS    &trans
+&trans  &kp F8  &kp F7   &kp F6   &kp F5   &trans    &kp N0        &kp N1  &kp N2  &kp N3  &kp PERCENT  &trans
                          &trans   &trans   &trans    &trans        &trans  &trans
             >;
         };
 
         symbol_layer {
             bindings = <
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &to 0              &trans
-&trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp UNDER        &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp PIPE           &trans
+&trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &to 0
 &trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT     &kp COLON             &kp COMMA              &kp DOT        &kp APOSTROPHE     &trans
                                   &trans            &trans             &trans           &trans     &trans                &trans
             >;
@@ -110,9 +105,18 @@
         navigation_layer {
             bindings = <
 &none  &none  &none           &none           &none         &none              &none           &none           &none         &none            &none  &none
-&none  &to 0  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &to 0  &none
+&to 0  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
 &none  &none  &none           &none           &none         &none              &none           &none           &none         &none            &none  &none
                               &trans          &trans        &trans             &trans          &trans          &trans
+            >;
+        };
+
+        function_layer {
+            bindings = <
+&trans  &kp ESC  &kp CAPSLOCK  &trans      &kp PRINTSCREEN  &kp PG_UP        &kp HOME  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+&trans  &kp TAB  &kp K_CUT     &kp K_COPY  &kp K_PASTE      &kp PAGE_DOWN    &kp END   &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&trans  &trans   &kp INSERT    &kp K_UNDO  &kp K_REDO       &kp DEL          &trans    &kp F1  &kp F2   &kp F3   &kp F4   &trans
+                               &trans      &trans           &trans           &trans    &trans  &trans
             >;
         };
     };
