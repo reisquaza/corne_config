@@ -98,7 +98,7 @@
 &trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp UNDER        &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp PIPE           &trans
 &trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &to 0
 &trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT     &kp COLON             &kp COMMA              &kp DOT        &kp APOSTROPHE     &trans
-                                  &trans            &trans             &trans           &trans     &trans                &trans
+                                  &trans            &to 0              &trans           &trans     &trans                &trans
             >;
         };
 
